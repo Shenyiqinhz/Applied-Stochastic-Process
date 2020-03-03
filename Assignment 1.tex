@@ -1,0 +1,122 @@
+
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\begin{document}
+\begin{center}
+\textbf{Applied Stochastic Process}
+\\
+\textbf{Assignment 1}
+\\
+\textbf{SHEN YIQIN  1730014057}
+\\
+\textbf{Mar /2 /2020}
+\end{center}
+\textrm{Question 1}
+\\
+\textrm{The sample space is:}  $S=[e_{1}, e_{2}, e_{3}, e_{4}, ... , e_{n} ].$
+\textrm{where }$e_{n}=e_{n-1}=H${, for }$i=1,2,3...n-2, e_{i}\in\{H,T\}${, but if }$e_{i}=H$, {then} $e_{i+1}=T.$
+\\
+\textrm{The probability that it will be tossed exactly four times is }$P=1\cdot\frac{1}{2}\cdot\frac{1}{2}\cdot\frac{1}{2}=\frac{1}{8}$
+\\
+\\
+\textrm{Question 2}
+\\
+\textrm{Since}$E\subset F,  P(E)\leq P(F), EF^{c}$\textrm{is disjoint with }$E.$\textrm{So,}$P(F)=P(E)+P(EF^{c})\geq P(E)$
+\\
+\\
+\textrm{Question 3}
+\\
+\textrm{It can be proved by using the method of induction}
+\\
+\textrm{When n=1, the inequality holds obviously.}
+\\
+$P(E_{1})\leq P(E_{1})$
+\\
+\textrm{Assume when n=k, the equality holds:}
+\\
+$P(\bigcup^{k}_{i=1}x_{i})\leq\sum^{k}_{i=1}P(x_{i})$
+\\
+\textrm{When n=k+1,}
+\\
+$P(\bigcup^{k+1}_{i=1}x_{i})=P(\bigcup^{k}_{i=1}x_{i}\cup x_{k+1})=P(\bigcup^{k}_{i=1}x_{i=1})+P(x_{k+1})-P(\bigcup^{k}_{i=1}x_{i}\cap x_{k+1}))$
+\\
+\textrm{Since, }$P(\bigcup^{k}_{i=1}x_{i}\cap x_{i}))\geq0,$
+\\
+$P(\bigcup^{k+1}_{i=1}x_{i})\leq P(\bigcup^{k}_{i=1}x_{i})+P(x_{k+1})=\sum^{k+1}_{i=1}P(x_{i})$
+\\
+\textrm{The inequality also holds. So, for any positive whole number n, the Boole's inequality holds.}
+\\
+\\
+\textrm{Question 4}
+\\
+\textrm{The sample space is:}  $S=\{e_{1}, e_{2}, ... ,e_{n}\}, n=2, 3, 4, ... ${, for }$i=1, 2,..., k,..., n-1,  e_{i}\in\{E, F, \mbox{neither E nor F}\}, e_{k}\in\{E, F\},  
+e_{n}=\left\{
+\begin{array}{rcl}
+E & \mbox{if} & { e_{k}=F}\\
+F & \mbox{if} & { e_{k}=E}
+\end{array} \right.$
+\\
+{Since E and F are mutually exclusive, }$P(E\cup F)=P(E)+P(F)$ 
+\\
+{We know that eventually E or F will occur, the problem is can be considered as when fisrt time E or F occurs, it will be E.}
+\\
+$P(\mbox{E before F})=P(E|E\cup F)=\frac{P(E\cap(E\cup F))}{P(E\cup F)}=\frac{P(E)}{P(E)+P(F)}.$
+\\
+\\
+{Question 5}
+\\
+$P(Awins)=p+(1-p)(1-p)p+(1-p)(1-p)(1-p)(1-p)p+....=\sum^{\infty}_{n=0}(1-p)^{2n}p=\frac{p}{2p-p^{2}}=\frac{1}{2-p}$
+\\
+$P(Bwins)=(1-p)p+(1-p)(1-p)(1-p)p+...=\sum^{\infty}{n=1}(1-p)^{2n-1}p=\frac{1-p}{2-p}$
+\\
+{Question 6}
+\\
+\begin{equation}
+\begin{aligned}
+P(E_{1}E_{2}...E_{n})&=P(E_{1})P(E_{2}E_{3}...E_{n}|E_{1})\\
+&=P(E_{1})P(E_{2}|E{1})P(E_{3}E_{4}...E_{n}|E_{1}E_{2})\\
+&
+&...\\
+&=P(E_{1})P(E_{2}|E_{1})P(E_{3}|E_{1}E_{2})...P(E_{n}|E_{1}E_{2}...E_{n})
+\end{aligned}
+\end{equation}
+\\
+\\
+{Question 7}
+\\
+{(a)}
+\\
+$P(E|F)=\frac{P(EF)}{P(F)}=0$
+\\
+{(b)}
+\\
+$P(E|F)=\frac{P(EF)}{P(F)}=\frac{P(E)}{P(F)}=\frac{0.6}{P(F)}$
+\\
+{(c)}\\
+$P(E|F)=\frac{P(EF)}{P(F)}=\frac{P(F)}{P(F)}=1$
+\\
+\\
+{Question 8}
+\\
+{(a)}
+\\
+{Assume A is the event that Bill hits the target, B is the event that George hits the target, C is the event that one of them hit the target. Obviously A and B are independent where }$P(A)=0.7, P(B)=0.4$\\
+$P(C)=0.7\cdot(1-0.6)+(1-0.7)\cdot0.4=0.42+0.12=0.64$
+\\
+$P(B|C)=\frac{P(BC)}{P(C)}=\frac{P(B)\cdot P(C|B)}{P(C)}=\frac{0.4\cdot(1-0.7)}{0.64}=\frac{2}{9}$
+\\
+{(b)}
+\\
+$P(B|A\cup B)=\frac{P(B)}{P(A\cup B)}=\frac{0.4}{0.7+0.4-0.28}=\frac{20}{41}$
+\\
+\\
+{Question 9}
+\\
+{Assume E is the event that A is executed, B is the event that knowing B is free, C is the event that knowing C is free}
+$P(A|B)=\frac{P(AB)}{P(B)}=\frac{P(A)\cdot P(B|A)}{P(B)}=\frac{\frac{1}{3}\cdot\frac{1}{2}}{\frac{1}{2}}=\frac{1}{3}$\\
+{Similarly, }
+$P(A|C)=P(A|B)=\frac{1}{3}$
+\\
+{So, jailer's reasoning is wrong.}
+\end{document}
